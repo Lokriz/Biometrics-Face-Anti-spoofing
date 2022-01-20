@@ -5,8 +5,6 @@ import pandas as pd
 import dlib
 import math
 import statistics
-from moviepy.editor import *
-
 
 # Функция поиска гауссовой площади по коодинатам точек многоугольника
 def PolyArea(x, y, nl):
@@ -187,9 +185,3 @@ for angle_type in angle_types:
         df.to_csv(path_or_buf=name + '.csv')
     else:
         print('Not enough marks')
-
-# Разделение исходного видео на фрагменты по найденным тайм-кодам
-# for i in range(len(start_time)):
-#     clip = VideoFileClip(name).subclip(start_time[i], fin_time[i])
-#     clip.write_videofile('test' + str(i) + '.mp4', audio= False)
-
